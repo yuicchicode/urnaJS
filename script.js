@@ -9,10 +9,23 @@ let numeros = document.querySelector('.s-1-3');
 // Ambient Variables
 
 let etapaAtual = 0;
+let numero = '';
+
+
+//functions
+
 
 function showWay() {
     let etapa = way[etapaAtual];
     let numeroHtml = '';
+
+    for (let i=0;i<etapa.numeros;i++) {
+        if(i === 0){
+            numeroHtml += '<div class="number onoff"></div>';
+        }else{
+            numeroHtml += '<div class="number"></div>';
+        }
+    }
 
     seuVotoPara.style.display = 'none';
     cargo.innerHTML = etapa.titulo;
@@ -22,8 +35,44 @@ function showWay() {
     numeros.innerHTML = numeroHtml;
 }
 
+function atualizaInterface() {
+    let etapa = way[etapaAtual];
+    let candidato = etapa.candidatos.filter((item)=>{
+        if(item.numero === numero) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    if(candidato.length > 0){
+        candidato = candidato[0];
+        seuVotoPara.style.display = 'block';
+        aviso.style.display = 'block';
+        descricao.innerHTML = `Nome: ${candidato.nome}<br/>Partido: ${candidato.partido}`;
+
+        let fotosHtml = '';
+        for(let i in candidato.fotos) {
+            fotosHtml += `<div class="s-1-image"><img src="images/${candidato.fotos[i].url}" alt="">${candidato.fotos[i].legenda}</div>`;
+        }
+        lateral.innerHTML = fotosHtml;
+    }
+
+    console.log('Candidato', candidato);
+}
+
 function clicou(n) {
-    alert ("clicou em "+n);
+    let elNumber = document.querySelector('.number.onoff');
+    if(elNumber !== null){
+        elNumber.innerHTML = n;
+        numero = `${numero}${n}`;
+
+        elNumber.classList.remove('onoff');
+        if(elNumber.nextElementSibling !== null) {
+            elNumber.nextElementSibling.classList.add('onoff');
+        } else {
+            atualizaInterface();
+        }
+    }
 }
 
 function branco(){
