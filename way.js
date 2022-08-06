@@ -5,7 +5,7 @@ let way = [
         candidatos: [
             {
                 numero: '38111',
-                nome: 'Joanna Da Arc',
+                nome: 'Pread Bitt',
                 partido: 'ABC',
                 fotos: [
                     {url: '38111.jpg', legenda: 'Vereador', small: false}
@@ -13,7 +13,7 @@ let way = [
             },
             {
                 numero: '77222',
-                nome: 'Bread o Pitt',
+                nome: 'Joanna Da Arc',
                 partido: 'DEFG',
                 fotos: [
                     {url: '77222.jpg',legenda: 'Vereador',small: false}

@@ -8,69 +8,92 @@
     <title>Urna Eletrônica</title>
 </head>
 <body>
-    <div class="urna">
-        <div class="screen">
-            <div class="s-1">
-                <div class="s-1-left">
-                    <div class="s-1-1">
-                        <span>Seu voto Para</span>
+    <div class="container">
+        <div class="urna">
+            <div class="screen">
+                <div class="s-1">
+                    <div class="s-1-left">
+                        <div class="s-1-1">
+                            <span>Seu voto Para</span>
+                        </div>
+                        <div class="s-1-2">
+                            <span>Vereador</span>
+                        </div>
+                        <div class="s-1-3">
+                            <div class="number"></div>
+                            <div class="number"></div>
+                        </div>
+                        <div class="s-1-4">
+                            Nome: Qualquer um <br>
+                            Partido: TP <br>
+                            vice-Prefeito: Um qualquer <br>
+                        </div>
                     </div>
-                    <div class="s-1-2">
-                        <span>Vereador</span>
-                    </div>
-                    <div class="s-1-3">
-                        <div class="number"></div>
-                        <div class="number"></div>
-                    </div>
-                    <div class="s-1-4">
-                        Nome: Qualquer um <br>
-                        Partido: TP <br>
-                        vice-Prefeito: Um qualquer <br>
+                    <div class="s-1-right">
+                        <div class="s-1-image">
+                            <img src="images/84.jpg" alt="">
+                            Prefeito
+                        </div>
+                        <div class="s-1-image small">
+                            <img src="images/84_2.jpg" alt="">
+                            vice-Prefeito
+                        </div>
                     </div>
                 </div>
-                <div class="s-1-right">
-                    <div class="s-1-image">
-                        <img src="images/84.jpg" alt="">
-                        Prefeito
-                    </div>
-                    <div class="s-1-image small">
-                        <img src="images/84_2.jpg" alt="">
-                        vice-Prefeito
-                    </div>
+                <div class="s-2">
+                    Aperte a tela:<br/>
+                    CONFIRMA para CONFIRMAR este voto <br/>
+                    CORRIGE para REINICIAR este voto
                 </div>
             </div>
-            <div class="s-2">
-                Aperte a tela:<br/>
-                CONFIRMA para CONFIRMAR este voto <br/>
-                CORRIGE para REINICIAR este voto
+            <div class="keyboard">
+                <div class="keyboard--line">
+                    <div class="keyboard--button" onclick="clicou('1')">1</div>
+                    <div class="keyboard--button" onclick="clicou('2')">2</div>
+                    <div class="keyboard--button" onclick="clicou('3')">3</div>
+                </div>
+                <div class="keyboard--line">
+                    <div class="keyboard--button" onclick="clicou('4')">4</div>
+                    <div class="keyboard--button" onclick="clicou('5')">5</div>
+                    <div class="keyboard--button" onclick="clicou('6')">6</div>
+                </div>
+                <div class="keyboard--line">
+                    <div class="keyboard--button" onclick="clicou('7')">7</div>
+                    <div class="keyboard--button" onclick="clicou('8')">8</div>
+                    <div class="keyboard--button" onclick="clicou('9')">9</div>
+                </div>
+                <div class="keyboard--line">
+                    <div class="keyboard--button" onclick="clicou('0')">0</div>
+                </div>
+                <div class="keyboard--line">
+                    <div class="keyboard--button button--branco" onclick="branco('')">BRANCO</div>
+                    <div class="keyboard--button button--corrige" onclick="corrige('')" >CORRIGE</div>
+                    <div class="keyboard--button button--confirma" onclick="confirma('')">CONFIRMA</div>
+                </div>
             </div>
         </div>
-        <div class="keyboard">
-            <div class="keyboard--line">
-                <div class="keyboard--button" onclick="clicou('1')">1</div>
-                <div class="keyboard--button" onclick="clicou('2')">2</div>
-                <div class="keyboard--button" onclick="clicou('3')">3</div>
+
+        <div class="information">
+            <div class="instructions">
+                <h1>instruções</h1>
+                <p> Vote em Branco, use os numeros impressos na urna ou então use os numeros do teclado numero para votar!</p>
             </div>
-            <div class="keyboard--line">
-                <div class="keyboard--button" onclick="clicou('4')">4</div>
-                <div class="keyboard--button" onclick="clicou('5')">5</div>
-                <div class="keyboard--button" onclick="clicou('6')">6</div>
-            </div>
-            <div class="keyboard--line">
-                <div class="keyboard--button" onclick="clicou('7')">7</div>
-                <div class="keyboard--button" onclick="clicou('8')">8</div>
-                <div class="keyboard--button" onclick="clicou('9')">9</div>
-            </div>
-            <div class="keyboard--line">
-                <div class="keyboard--button" onclick="clicou('0')">0</div>
-            </div>
-            <div class="keyboard--line">
-                <div class="keyboard--button button--branco" onclick="branco('')">BRANCO</div>
-                <div class="keyboard--button button--corrige" onclick="corrige('')" >CORRIGE</div>
-                <div class="keyboard--button button--confirma" onclick="confirma('')">CONFIRMA</div>
+            <div class="vereadores">
+                <h2>Vereadores</h2>
+                <p>38111 - Pread Bitt <br> 77222 - Joanna Da Arc</p>
+            </div>  
+            <div class="prefeitos">
+                <h2>Prefeitos</h2>
+                <p>99 - Pris Catt <br> 84 - Com Truise</p>
+            </div>  
+            <div class="information-2">
+                <p>s</p>
             </div>
         </div>
+
     </div>
+
+
 
     <script src="way.js"></script>
     <script src="script.js"></script>
